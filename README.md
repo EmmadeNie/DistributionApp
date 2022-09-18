@@ -2,6 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project specifics
+run db server: `npx json-server --watch db.json` - listens on port 3000 
+if json-server doesn't install, `npm i json-server`
+run frontend `npm start`- it will ask to run on a different port, enter `y` - listens on port 3001
+
+
 ## Available Scripts
 
 In the project directory, you can run:

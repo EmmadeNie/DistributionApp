@@ -1,0 +1,9 @@
+@import 'src/styles/variables.scss';
+
+.distributionComponent {
+    color: $secondary-color;
+
+    &__text {
+        color: pink;
+    }
+}
