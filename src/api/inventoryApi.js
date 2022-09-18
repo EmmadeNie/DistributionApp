@@ -22,12 +22,12 @@ export const getAllPreviousDeliveryDates = (inventory) => {
     return prevDates
 }
 
-export const getAmountInStock = (inventory) => {
+export const getAmountPerInventoryList = (inventory) => {
     //add amounts of all previous dates to return a total
-    return getAllPreviousDeliveryDates(inventory).reduce((a, b) => a + b.amount, 0)
+    return inventory.reduce((a, b) => a + b.amount, 0)
 }
 
-export const getAllUpcomingDeliveryDates = (inventory) => {
+export const getAllUpcomingDeliveryDates = (inventory, date) => {
     const today = parseDate(new Date().toISOString());
     const upcomingDates = inventory.filter(date => date.date > today)
     return upcomingDates

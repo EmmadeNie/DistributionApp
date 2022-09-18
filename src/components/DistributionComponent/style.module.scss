@@ -3,7 +3,40 @@
 .distributionComponent {
     color: $secondary-color;
 
-    &__text {
-        color: pink;
+    &__segmentsContainer {
+        display: flex;
+        justify-content: center;
+
+
+
+        &__segment {
+            border: 2px solid black;
+            width: 100px;
+
+            &:hover .distributionComponent__segmentsContainer__segment__dateLabel {
+                opacity: 1;
+            }
+
+            &__now {
+                border: 2px solid green;
+            }
+
+            &__amount {
+                border: 2px solid pink;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            &__dateLabel {
+                border: 2px solid purple;
+                transition: opacity 225ms ease-in-out;
+                opacity: 0;
+
+
+            }
+        }
     }
 }
