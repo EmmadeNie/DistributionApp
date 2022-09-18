@@ -29,6 +29,8 @@ export const Layout = () => {
     useEffect(() => {
         if (quantityInput > amountInStock + amountToBeDelivered) {
             setErrorMessage(`Sorry mate! We can only promiss you ${amountToBeDelivered + amountInStock} pairs of shoes`)
+        } else {
+            setErrorMessage(null)
         }
         //add availability per date to All dates
         let newSegmentsToShow = allUpcomingDeliveryDates.map((dates, i) => {

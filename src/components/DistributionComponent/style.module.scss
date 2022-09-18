@@ -1,42 +1,83 @@
 @import 'src/styles/variables.scss';
 
 .distributionComponent {
-    color: $secondary-color;
 
     &__segmentsContainer {
         display: flex;
-        justify-content: center;
-
-
+        // justify-content: center;
 
         &__segment {
-            border: 2px solid black;
             width: 100px;
+            position: relative;
 
-            &:hover .distributionComponent__segmentsContainer__segment__dateLabel {
+            &:hover .distributionComponent__segmentsContainer__segment__tooltip {
+                top: -50px;
                 opacity: 1;
             }
 
+
             &__now {
-                border: 2px solid green;
+                position: absolute;
+                top: -30px;
+                height: 30px;
+                width: 100%;
+                text-align: center;
+                border-radius: 10px 10px 0 0;
+                background-color: $primary-color;
             }
 
             &__amount {
-                border: 2px solid pink;
+                z-index: 1;
                 height: 50px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
 
+                &_colorPrimary {
+                    background-color: $primary-color;
+
+                }
+
+                &_color1 {
+                    background-color: $segment-color-1;
+                }
+
+                &_color2 {
+                    background-color: $segment-color-2;
+                }
+
+                &_color3 {
+                    background-color: $segment-color-3;
+                }
+
+                &_color4 {
+                    background-color: $segment-color-4;
+                }
+
+
+
+
+
             }
 
-            &__dateLabel {
-                border: 2px solid purple;
-                transition: opacity 225ms ease-in-out;
+            &__tooltip {
+                z-index: -1;
                 opacity: 0;
+                transition: all 225ms ease-in;
+                width: 150px;
+                height: 20px;
+                top: 0px;
+                position: absolute;
+                border-radius: 8px;
+                background-color: $primary-color;
 
-
+                color: white;
+                padding: 5px;
+                text-align: center;
             }
+
+
+
         }
     }
 }
